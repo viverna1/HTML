@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия по миру</title>
+    <link rel="stylesheet" href="..\static\css\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="toggle-section">
+  <div class="toggle-container">
+    <input type="checkbox" class="style-toggle" hidden checked
+           data-target="section-1">
+    <label class="toggle-btn" data-for="section-1" 
+           title="Отключить стили"></label>
+  </div>
+  <h2>Секция 1</h2>
+  <p>Стили можно отключить для этой секции</p>
+</section>
+
+<section class="toggle-section">
+  <div class="toggle-container">
+    <input type="checkbox" class="style-toggle" hidden checked
+           data-target="section-2">
+    <label class="toggle-btn" data-for="section-2"
+           title="Отключить стили"></label>
+  </div>
+  <h2>Секция 2</h2>
+  <p>У каждой секции свой независимый переключатель</p>
+</section>
+
+    <script src="..\static\scripts\script.js"></script>
+</body>
+</html>

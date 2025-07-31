@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2 страница</title>
+    <link rel="stylesheet" href="..\static\css\summary_style.css">
+
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            /* Стили кнопки */
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff3b30;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            
+            /* Граница для глубины */
+            border: 2px solid #d62c20;
+            
+            /* Анимация при наведении */
+            &:hover {
+                background-color: #d62c20;
+                transform: translateY(-2px);
+            }
+            
+            /* Эффект нажатия */
+            &:active {
+                transform: translateY(1px);
+            }
+        }
+        
+        #main-header {
+            background: linear-gradient(to bottom, red, rgba(0, 0, 0, 0));
+        }
+    </style>
+</head>
+<body>
+    <div class="texture-wrapper"></div>
+    
+    <header id="main-header">
+        <div id="header-gradient">
+            <h1>Сайт для теста</h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <a href="summary.html">Обратно</a>
+            <br>
+        </section>
+    </main>
+</body>
+</html>

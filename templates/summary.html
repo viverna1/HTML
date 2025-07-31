@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конспект</title>
+    
+    <!-- Будет видно скриптам -->
+    <meta name="author" content="v-v">
+    <meta name="description" content="Сайт для записи всех компонентов веб сайта">
+    <meta name="keywords" content="тест,проверка,html,конспект">
+
+    <!-- Подключение CSS файла -->
+    <link rel="stylesheet" href="..\static\css\summary_style.css">
+
+    <!-- Шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Milligram+Variable:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="texture-wrapper"></div>
+
+    <header id="main-header">
+        <div id="header-gradient">
+            <h1>Конспект по HTML, CSS и JavaScript</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Переключение между разделами -->
+        <div id="main-nav">
+            <div class="underline"></div>
+            <ul style="list-style: none;">
+                <li class="html-text">HTML</li>
+                <li class="css-text">CSS</li>
+                <li class="js-text">Java-Script</li>
+            </ul>
+        </div>
+        <!-- Шаблон
+        <section>
+            <header id="heading"><h2>название</h2></header>
+            
+            <p>
+                описание
+
+                <ul class="attributes-list">
+                    <li>
+                        <mark></mark>
+                        <ul>
+                            <li><code></code> - </li>
+                            <li><code></code> - </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <mark></mark>
+                        <ul>
+                            <li><code></code> - </li>
+                            <li><code></code> - </li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+            
+            <code class="language-html">
+    &lt;>
+            </code>
+            
+            <div class="result">
+
+            </div>
+        </section> 
+        -->
+
+        <!-- HTML -->
+        <div id="HTML-container">
+
+            <!-- Заголовки -->
+            <section class="disabled">
+                <header id="heading"><h2>Заголовки</h2></header>
+                
+                <p>Чем больше цифра в теге тем меньше текст</p>
+                
+                <code class="language-html">
+    &lt;h1>Уровень заголовка 1&lt;/h1>
+    &lt;h2>Уровень заголовка 2&lt;/h2>
+    &lt;h3>Уровень заголовка 3&lt;/h3>
+    &lt;h4>Уровень заголовка 4&lt;/h4>
+    &lt;h5>Уровень заголовка 5&lt;/h5>
+    &lt;h6>Уровень заголовка 6&lt;/h6>
+                </code>
+                
+                <div class="result">
+                    <h1>Уровень заголовка 1</h1>
+                    <h2>Уровень заголовка 2</h2>
+                    <h3>Уровень заголовка 3</h3>
+                    <h4>Уровень заголовка 4</h4>
+                    <h5>Уровень заголовка 5</h5>
+                    <h6>Уровень заголовка 6</h6>
+                </div>
+            </section>
+            
+            <!-- Отоброжение текста -->
+            <section class="disabled">
+                <header id="heading"><h2>Отоброжение текста</h2></header>
+                
+                <p>&lt;p> - делает отступы сверху и снизу и занимает всю ширину экрана<br>
+                    &lt;hr> - делает линию на всю ширину<br>
+                    &lt;br> - делает отступ на следайщую строку
+                </p>
+                
+                <code class="language-html">
+    &lt;p>Это параграф&lt;/p>
+    &lt;hr>
+    &lt;br>
+                </code>
+                
+                <div class="result">
+                    <p>Это параграф</p>
+                    <hr>
+                    <br>
+                </div>
+            </section> 
+            
+            <!-- Стили -->
+            <section class="disabled">
+                <header id="heading"><h2>Стили</h2></header>
+                
+                <p>
+                    &lt;b> - жирный текст<br>
+                    &lt;strong> - то же самое что и &lt;b> но приоритетнее для скриптов<br>
+                    &lt;i> - курсивный<br>
+                    &lt;em> - курсив приоритентнее<br>
+                    <br>
+                    &lt;s> - перечёркнутый<br>
+                    &lt;u> - подчёркнутый<br>
+                    &lt;code> - для кода
+                </p>
+                
+                <code class="language-html">
+    &lt;b>Жирный текст&lt;/b>
+    &lt;strong>Сильный текст&lt;/strong>
+    &lt;i>Курсивный текст&lt;/i>
+    &lt;em>Курсивный важеый текст&lt;/em>
+    <br>
+    &lt;s>Зачёркнуый&lt;/s>
+    &lt;u>Подчёркнутый&lt;/u>
+    &lt;code>код&lt;/code>
+                </code>
+                
+                <div class="result">
+                    <b>Жирный текст</b><br>
+                    <strong>Сильный текст</strong><br>
+                    <i>Курсивный текст</i><br>
+                    <em>Курсивный важеый иекси</em><br>
+                    <br>
+                    <s>Зачёркнуый</s><br>
+                    <u>Подчёркнутый</u><br>
+                    <code>код</code>
+                </div>
+
+                <p>
+                    <br>Дополнительно:<br>
+                    &lt;sub> - Делает текст по ниже<br>
+                    &lt;sup> - По выше<br>
+                    &lt;small> - для мелкого текста<br>
+                    <br>
+                    &lt;mark> - Выделяет текст цветом<br>
+                    &lt;pre> - Текст сохраняет отступы и переходы<br>
+                    &lt;blockquote> - цитата (имеет аттрибут site)<br>
+                    &lt;cite> - для источника откуда взята цитата<br>
+                    &lt;q> - для коротких цитат
+                </p>
+                
+                <code class="language-html">
+    &lt;sub>Низкий текст&lt;/sub>
+    &lt;sup>Высокий текст&lt;/sup>
+    &lt;small>Маленький текст&lt;/small>
+
+    &lt;mark>Выделеный текст&lt;/mark>
+    &lt;pre>Сохраняет    
+        переходы и отступы&lt;/pre>
+    &lt;blockquote>цитата&lt;/blockquote>
+    &lt;cite>ссылка&lt;/cite>
+    &lt;q>мини цитата&lt;/q>
+                </code>
+                
+                <div class="result">
+                    <sub>Низкий текст</sub><br>
+                    <sup>Высокий текст</sup><br>
+                    <small>Маленький текст</small><br>
+                    <br>
+                    <mark>Выделеный текст</mark><br>
+                    <pre>Сохраняет
+    переходы и отступы</pre>
+                    <blockquote>цитата</blockquote>
+                    <cite>ссылка</cite><br>
+                    <q>мини цитата</q>
+                </div>
+            </section> 
+
+            <!-- Списки -->
+            <section class="disabled">
+                <header id="heading"><h2>Списки</h2></header>
+                
+                <p>
+                    &lt;ul> - маркированый список, то есть с точками<br>
+                    &lt;ol> - нумерованый список, с цифрами<br>
+                    &lt;li> - элементы тега
+                </p>
+                
+                <code class="language-html">
+    &lt;ul>
+        &lt;li>Текст&lt;/li>
+        &lt;li>Текст&lt;/li>
+        &lt;li>Текст&lt;/li>
+    &lt;/ul>
+
+    &lt;ol>
+        &lt;li>Текст&lt;/li>
+        &lt;li>Текст&lt;/li>
+        &lt;li>Текст&lt;/li>
+    &lt;/ol>
+                </code>
+                
+                <div class="result">
+                    <ul>
+                        <li>Текст</li>
+                        <li>Текст</li>
+                        <li>Текст</li>
+                    </ul>
+                    <br>
+                    <ol>
+                        <li>Текст</li>
+                        <li>Текст</li>
+                        <li>Текст</li>
+                    </ol>
+                </div>
+            </section> 
+
+            <!-- Таблицы -->
+            <section class="disabled">
+                <header id="heading"><h2>Таблицы</h2></header>
+                
+                <p>
+                    таб таб
+    
+                    <ul class="attributes-list">
+                        <li>
+                            <mark>Теги</mark>
+                            <ul>
+                                <li><code>&lt;table></code> - контейнер для таблицы</li>
+                                <li><code>&lt;tr></code> - строка</li>
+                                <li><code>&lt;td></code> - ячейка</li>
+                                <li><code>&lt;th></code> - заголовочная ячейка таблицы</li>
+                                <li></li>
+                                <li><code>&lt;caption></code> - заголовок над таблицой</li>
+                                <li><code>&lt;thead></code> - для верхней строки</li>
+                                <li><code>&lt;tbody></code> - основная часть таблицы</li>
+                                <li><code>&lt;tfoot></code> - нижняя строка</li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <mark>Аттрибуты</mark>
+                            <ul>
+                                <li>colspan<code></code> - что бы ячейка занимала 2 места в ширину</li>
+                                <li>rowspan<code></code> - занимала 2 места в длинну</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                
+                <code class="language-html">
+    &lt;<mark>table</mark>>
+        &lt;<mark>caption</mark>>Таблица&lt;/caption>
+
+        &lt;<mark>thead</mark>>
+            &lt;tr>
+                &lt;th>цифра&lt;/th>
+                &lt;th>буква&lt;/th>
+            &lt;/tr>
+        &lt;/thead>
+
+        &lt;<mark>tbody</mark>>
+            &lt;<mark>tr</mark>>
+                &lt;<mark>td</mark>>1&lt;/td>
+                &lt;td>один&lt;/td>
+            &lt;/tr>
+
+            &lt;tr>
+                &lt;td>2&lt;/td>
+                &lt;td  <mark>rowspan="2"</mark>>два&lt;/td>
+            &lt;/tr>
+
+            &lt;tr>
+                &lt;td>4&lt;/td>
+            &lt;/tr>
+        &lt;/tbody>
+
+        &lt;<mark>tfoot</mark>>
+            &lt;tr>
+                &lt;td <mark>colspan="2"</mark>>низ&lt;/td>
+            &lt;/tr>
+        &lt;/tfoot>
+    &lt;/table>
+                </code>
+                
+                <div class="result">
+                    <table>
+                        <caption>Таблица</caption>
+
+                        <thead>
+                            <tr>
+                                <th>цифра</th>
+                                <th>буква</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>один</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td  rowspan="2">два</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">низ</td>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+                </div>
+            </section>
+    
+            <!-- Ссылки -->
+            <section class="disabled">
+                <header id="heading"><h2>Ссылки</h2></header>
+                
+                <p>
+                    Тег &lt;a> обозначает ссылку, которую нужно вписать в атрибут href
+
+                    <ul class="attributes-list">
+                        <li>
+                            <mark>href</mark>
+                            <ul>
+                                <li><code>URL</code> - абсолютный или относительный путь</li>
+                                <li><code>#id</code> - якорь на странице</li>
+                                <li><code>mailto:</code> - ссылка на email</li>
+                                <li><code>tel:</code> - ссылка на номер</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <mark>target</mark>
+                            <ul>
+                                <li><code>_blank</code> - открывает ссылку в новой вкладке</li>
+                                <li><code>_self</code> - открывает в текущей вкладке (по умолчанию)</li>
+                                <li><code>_parent</code> - открывает в родительском фрейме</li>
+                                <li><code>_top</code> - открывает в верхнем фрейме</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                
+                <code class="language-html">
+    &lt;a href="<mark>https://</mark>example.com/">Другой сайт&lt;/a>
+    &lt;a href="<mark>/</mark>Конспекты/html 2/templates/about.html">Локальный сайт&lt;/a>
+    &lt;a href="<mark>#</mark>main-header">Верх страницы&lt;/a>
+    &lt;a href="/Конспекты/html 2/images/art.jpg" <mark>download</mark>>Скачать&lt;/a>
+    &lt;a href="<mark>mailto:</mark>ulybinmisa@gmail.com">електронная@почта.com&lt;/a>
+    &lt;a href="<mark>tel:</mark>+79999999999">+7 (999) 999 99-99&lt;/a>
+
+    &lt;a href="#" <mark>target="_blank"</mark>>Новая вкладка&lt;/a>
+    &lt;a href="#" <mark>target="_self"</mark>>Эта же вкладка&lt;/a>
+    &lt;a href="#" <mark>target="_parent"</mark>>Вкладка в родительском фрейме&lt;/a>
+    &lt;a href="#" <mark>target="_top"</mark>>Вкладка поверх этого сайта&lt;/a>
+                </code>
+                
+                <div class="result">
+                    <a href="https://example.com/">Другой сайт</a><br>
+                    <a href="/Конспекты/html 2/templates/about.html">Локальный сайт</a><br>
+                    <a href="#main-header">Верх страницы</a><br>
+                    <a href="/Конспекты/html 2/images/art.jpg" download>Скачать</a><br>
+                    <a href="mailto:ulybinmisa@gmail.com">електронная@почта.com</a><br>
+                    <a href="tel:+79999999999">+7 (999) 999 99-99</a><br>
+                    <br>
+                    <a href="#" target="_blank">Новая вкладка</a><br>
+                    <a href="#" target="_self">Эта же вкладка</a><br>
+                    <a href="#" target="_parent">Вкладка в родительском фрейме</a><br>
+                    <a href="#" target="_top">Вкладка поверх этого сайта</a><br>
+                </div>
+            </section> 
+
+            <!-- Кнопка и ввод -->
+            <section class="disabled1">
+
+                <header id="heading"><h2>Ввод</h2></header>
+                
+                <!-- Кнопка -->
+                <div class="disabled">
+                    <header><h3>Кнопки</h3></header>
+
+                    <p>
+                        <mark>&lt;input type="button"></mark> и <mark>&lt;button>&lt;/button></mark> - это одно и то же<br>
+                        В отличии от ссылок, кнопки нужно использовать, при взаимодействии с самим сайтом
+
+                    <ul class="attributes-list">
+                        <li>
+                            <mark>type</mark>
+                            <ul>
+                                <li><code>button</code> - по умолчанию, обычная кнопка</li>
+                                <li><code>submit</code> - стоит в писывать в теге &lt;form>. 
+                                    При нажатии обновляет страницу</li>
+                                <li><code>reset</code> - сбрасывает все введённые поля</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                    
+                    <code class="language-html">
+    &lt;button>Кнопка&lt;/button>
+    &lt;button <mark>type="submit"</mark>>Подтвердить&lt;/button>
+    &lt;button type="<mark>reset</mark>">Сбросить&lt;/button>
+    &lt;<mark>input type="button"</mark> value="input">
+                    </code>
+                    
+                    <div class="result">
+                        <button class="button">Кнопка</button>
+                        <button class="button" type="submit">Подтвердить</button>
+                        <button class="button" type="reset">Сбросить</button>
+                        <input  class="button"  type="button" value="input">
+                    </div>
+                </div>
+
+                <!-- Выпадающий список -->
+                <div class="disabled">
+                    <header><h3>Выпадающий список</h3></header>
+
+                    <p></p>
+                    
+                    <code class="language-html">
+    &lt;>
+                    </code>
+                    
+                    <div class="result">
+                        
+                    </div>
+                </div>
+
+                <!-- Текстовый ввод -->
+                <div class="disabled">
+                    <header><h3>Текстовый ввод</h3></header>
+
+                    <p></p>
+                    
+                    <code class="language-html">
+    &lt;>
+                    </code>
+                    
+                    <div class="result">
+                        
+                    </div>
+                </div>
+                
+                <!-- Другое -->
+                <div class="disabled1">
+                    <header><h3>Другое</h3></header>
+
+                    <p>
+                        форма
+
+                        <ul class="attributes-list">
+                            <li>
+                                <mark></mark>
+                                <ul>
+                                    <li><code></code> - </li>
+                                    <li><code></code> - </li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <mark></mark>
+                                <ul>
+                                    <li><code></code> - </li>
+                                    <li><code></code> - </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <code class="language-html">
+    &lt;>
+                    </code>
+                    
+                    <div class="result">
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блочные и строчные теги -->
+            <section class="disabled">
+                <header id="heading"><h2>Блочные и строчные теги</h2></header>
+                
+                <p>&lt;div> - занимает всю доступную ему ширину<br>
+                    &lt;span> - занимает столько места, сколько в нём содержится контента<br>
+                    &lt;section> - блок со связаным по смыслу контенту<br>
+                    &lt;article> - блок с независимым от сайта контентом
+                </p>
+                
+                <code class="language-html">
+    &lt;div>
+        Это блочный тег
+    &lt;/div>
+
+    &lt;span>
+        Это строчный тег
+    &lt;/span>
+
+    &lt;section>
+        Это связано по смыслу
+    &lt;/section>
+
+    &lt;article>
+        Это другое
+    &lt;/article>
+                </code>
+                
+                <div class="result">
+                    <div class="highlighted">
+                        Это блочный тег
+                    </div>
+
+                    <span class="highlighted">
+                        Это строчный тег
+                    </span>
+
+                    <section class="highlighted">
+                        Это связано по смыслу
+                    </section>
+
+                    <article class="highlighted">
+                        Это другое
+                    </article>
+                </div>
+            </section>
+
+            <!-- Медиа -->
+            <section class="disabled">
+                <header id="heading"><h2>Медиа</h2></header>
+            
+                <!-- Картинки -->
+                <div class="disabled1">
+                    <p>
+                        Картинки
+
+                        <ul class="attributes-list">
+                            <li>
+                                <mark>Аттрибуты</mark>
+                                <ul>
+                                    <li><code>src</code> - ссылка на изображение</li>
+                                    <li><code>alt</code> - будет писаться если фото не загрузилось (стоит писать только если оно важное)</li>
+                                    <li><code>width/height</code> - размеры. при загрузке сайта будет заранее выделяться место</li>
+                                    <li><code>loading</code> - lazy (отложенная загрузка) или eager (немедленная)</li>
+                                    <li><code>decoding</code> - async (асинхронная декодировка), sync (синхронная) или auto</li>
+                                    <li><code>srcset</code> - набор изображений для разных разрешений экрана</li>
+                                    <li><code>sizes</code> - условия для выбора из srcset</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <code class="language-html">
+    &lt;img <mark>src="\ссылка\" alt="нико"</mark> height="300">
+
+    &lt;img src="../media/art.jpg" alt="прото" height="300" <mark>loading="lazy"</mark>>
+
+    &lt;img src="\ссылка\" alt="фапута" height="300" <mark>decoding="async"</mark>>
+    
+    &lt;img src="#" <mark>alt="Арт"</mark>>
+                    </code>
+                    
+                    <div class="result">
+                        <img src="https://i.pinimg.com/736x/33/c4/68/33c468e1c6a173014e2b452fca60cc18.jpg" 
+                            alt="нико" height="300">
+                        <img src="../media/art.jpg" alt="прото" height="300" loading="lazy">
+            
+                        <img src="https://i.pinimg.com/736x/ff/f7/36/fff736cc60fe89c71640bb69ba70a5d9.jpg" alt="фапута" height="300" loading="lazy">
+
+                        <img src="#" alt="Арт">
+                    </div>
+                </div>
+            
+                <!-- Видео -->
+                <div class="disabled1">
+                    <p>
+                        Видео.<br> 
+                        Тег &lt;source> нужен для нескольких ссылок на видео, и если одна не загрузилась, то будет попытка загрузить другую.
+                        а после него можно добавить тег &lt;p> и написать в нём что то типо "видео не поддерживается"
+                        <ul class="attributes-list">
+                            <li>
+                                <mark>Аттрибуты</mark>
+                                <ul>
+                                    <li><code>controls</code> - добавляет элементы управления к видео</li>
+                                    <li><code>autoplay</code> - запускает видео</li>
+                                    <li><code>loop</code> - повторяет видео</li>
+                                    <li><code>muted</code> - без звука</li>
+                                    <li><code>playsinline</code> - воспроизведение встроено в страницу (для мобильных)</li>
+                                    <li><code>preload</code> - auto (загрузить сразу), metadata (только метаданные), none (не загружать)</li>
+                                    <li><code>poster</code> - изображение-заставка перед воспроизведением</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <code class="language-html">
+    &lt;video src="..\media\video.mp4" height="300" <mark>controls</mark> <mark>muted</mark>
+           preload="metadata" <mark>poster="\ссылка\"</mark>>&lt;/video>
+    
+    &lt;video <mark>autoplay</mark> <mark>loop</mark> muted playsinline>
+        &lt;<mark>source</mark> <mark>src="..\media\shark.gif" type="video/gif"</mark>>
+        &lt;source <mark>src="..\media\shark.mp4"</mark> type="video/mp4">
+        &lt;p>браузер не поддерживает видео&lt;/p>
+    &lt;/video>
+                    </code>
+                    
+                    <div class="result">
+                        <video src="..\media\video.mp4" height="300" controls muted preload="metadata"
+                               poster="https://static1.e621.net/data/sample/98/ac/98ac495a10f394b532ae4394b4f14d41.jpg"></video>
+                        
+                        <video autoplay loop muted playsinline>
+                            <source src="..\media\shark.gif" type="video/gif">
+                            <source src="..\media\shark.mp4" type="video/mp4">
+                            <p>браузер не поддерживает видео</p>
+                        </video>
+                    </div>
+                </div>
+            
+                <!-- Аудио -->
+                <div class="disabled1">
+                    <p>
+                        Аудио<br>     
+                        работают теги для видео           
+                        <ul class="attributes-list">
+                            <li>
+                                <mark>Аттрибуты</mark>
+                                <ul>
+                                    <li><code>controls</code> - элементы управления</li>
+                                    <li><code>autoplay</code> - автоматическое воспроизведение</li>
+                                    <li><code>loop</code> - зацикливание</li>
+                                    <li><code>muted</code> - без звука</li>
+                                    <li><code>preload</code> - стратегия загрузки (auto/metadata/none)</li>
+                                    <li><code>volume</code> - громкость (от 0.0 до 1.0)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <code class="language-html">
+    &lt;audio controls preload="auto" volume="0.2">
+        &lt;source src="audio.mp3" type="audio/mpeg">
+        &lt;source src="audio.ogg" type="audio/ogg">
+    &lt;/audio>
+                    </code>
+                    
+                    <div class="result">
+                        <audio controls preload="auto" volume="0.2">
+                            <source src="../media/audio.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            
+                <!-- Виджеты -->
+                <div class="disabled1">
+                    <p>
+                        Виджет<br>     
+                        фрагменты с других сайтов, интерактивную карту, видео с ютуба<br>
+                        на некоторых сайтах есть специальные штуки для создания виджетов
+                        <ul class="attributes-list">
+                            <li>
+                                <mark>Аттрибуты</mark>
+                                <ul>
+                                    <li><code>src</code> - URL встраиваемого контента</li>
+                                    <li><code>width/height</code> - размеры виджета</li>
+                                    <li><code>frameborder</code> - граница (0/1)</li>
+                                    <li><code>allowfullscreen</code> - разрешение на полноэкранный режим</li>
+                                    <li><code>allow</code> - разрешения для iframe (например, "accelerometer; autoplay; clipboard-write")</li>
+                                    <li><code>sandbox</code> - ограничения безопасности (allow-forms, allow-scripts и др.)</li>
+                                    <li><code>loading</code> - lazy (отложенная загрузка)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <code class="language-html">
+                        
+    &lt;iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2fd6de672997941cfcb25bbb5906df85ccbb3b38d166d54f4f2f9e24c65c0c70&source=constructor" width="500" height="400" frameborder="0" loading="lazy">&lt;/iframe>
+
+    &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/sIQajlvm1wE?si=UvaHeo7YxrTR8How" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">&lt;/iframe>
+    
+    &lt;iframe 
+        src="https://x.com/home" 
+        width="500" 
+        height="400" 
+        frameborder="0" 
+        allowfullscreen
+        allow="accelerometer; autoplay"
+        sandbox="allow-scripts allow-same-origin"
+        loading="lazy">
+    &lt;/iframe>
+                    </code>
+                    
+                    <div class="result">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2fd6de672997941cfcb25bbb5906df85ccbb3b38d166d54f4f2f9e24c65c0c70&source=constructor" width="500" height="400" frameborder="0" loading="lazy"></iframe>
+            
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sIQajlvm1wE?si=UvaHeo7YxrTR8How" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+            
+                        <iframe src="https://x.com/home" frameborder="0" width="500" height="500" sandbox="allow-scripts" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- CSS -->
+        <div id="CSS-container">
+            
+        </div>
+        
+        <!-- Java Script -->
+        <div id="JS-container">
+
+        </div>
+
+    </main>
+    <script src="..\static\scripts\summaty_script.js"></script>
+</body>
+</html>
