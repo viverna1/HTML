@@ -195,6 +195,58 @@
                 </div>
             </section> 
 
+            <!-- Глобальные аттрибуты -->
+            <section class="disabled1">
+                <header id="heading"><h2>Глобальные аттрибуты</h2></header>
+                
+                <p>
+                    Нужны для взаимодействия HTML с CSS и JavaScript.<br>
+
+                    <ul class="attributes-list">
+                        <li>
+                            <mark>Атрибуты</mark>
+                            <ul>
+                                <li><code>id</code> – уникальный элемент для каждого тега</li>
+                                <li><code>class</code> – назначает класс(ы) для CSS и JS</li>
+                                <li><code>style</code> – позволяет писать CSS прямо в теге</li>
+                                <li><code>title</code> – всплывающая подсказка при наведении</li>
+                                <li><code>hidden</code> – полностью скрывает элемент</li>
+                                <li><code>tabindex</code> – порядок перехода по Tab</li>
+                                <li><code>lang</code> – язык содержимого (например, "ru", "en")</li>
+                                <li><code>contenteditable</code> – делает текст редактируемым</li>
+                                <li><code>data-*</code> – собственные атрибуты для хранения данных</li>
+                                <li><code>draggable</code> – можно перетаскивать элемент (true/false)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                
+                <code class="language-html">
+    &lt;p <mark>id="my-text"</mark> <mark>class="highlight"</mark>>Текст с id и классом&lt;/p>
+    &lt;div <mark>title="подсказка"</mark>>Наведи мышь&lt;/div>
+    &lt;span <mark>hidden</mark>>Скрытый текст&lt;/span>
+    &lt;p <mark>tabindex="1"</mark>>Сначала&lt;/p>
+    &lt;p <mark>tabindex="2"</mark>>Потом&lt;/p>
+    &lt;p <mark>lang="en"</mark>>Hello!&lt;/p>
+    &lt;div <mark>contenteditable="true"</mark>>Можно редактировать прямо здесь&lt;/div>
+    &lt;div <mark>data-info="123"</mark>>Элемент с data-атрибутом&lt;/div>
+    &lt;p <mark>draggable="true"</mark>>Перетащи меня&lt;/p>
+                </code>
+                
+                <div class="result">
+                    <p id="my-text" class="highlight">Текст с id и классом</p>
+                    <div title="подсказка">Наведи мышь</div>
+                    <span hidden>Скрытый текст</span><br>
+                    <p tabindex="1">Сначала</p>
+                    <p tabindex="2">Потом</p>
+                    <p lang="en">Hello!</p>
+                    <div contenteditable="true">Можно редактировать прямо здесь</div>
+                    <div data-info="123">Элемент с data-атрибутом</div>
+                    <p draggable="true">Перетащи меня</p>
+                </div>
+            </section>
+
+
             <!-- Списки -->
             <section class="disabled1">
                 <header id="heading"><h2>Списки</h2></header>
@@ -962,7 +1014,10 @@
                         <li>
                             <mark>Аттрибуты</mark>
                             <ul>
-                                <li><code>class</code> - </li>
+                                <li><code>class</code> - Соединять с CSS можно через точку. Можно писать несколько, разделёнными пробелами</li>
+                                <li><code>id</code> - Соединять с CSS можно через #. Уникальный элемент для каждого тега</li>
+                                <li><code></code> - </li>
+                                <li><code></code> - </li>
                                 <li><code></code> - </li>
                             </ul>
                         </li>

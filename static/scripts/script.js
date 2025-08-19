@@ -75,7 +75,7 @@ function setUnderline(element) {
 
 // Инициализация - подчеркиваем первый элемент
 if (navItems.length > 0) {
-    setUnderline(navItems[0]);
+    setUnderline(navItems[1]);
 
     // Получаем все секции
     const HTML_section = document.getElementById("HTML-container");
@@ -83,8 +83,8 @@ if (navItems.length > 0) {
     const JS_section = document.getElementById("JS-container");
 
     // Сначала скрываем все секции
-    HTML_section.style.display = "block";
-    CSS_section.style.display = "none";
+    HTML_section.style.display = "none";
+    CSS_section.style.display = "block";
     JS_section.style.display = "none";
 }
 
