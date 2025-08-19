@@ -10,7 +10,7 @@
     <meta name="keywords" content="тест,проверка,html,конспект">
 
     <!-- Подключение CSS файла -->
-    <link rel="stylesheet" href="\static\css\style.css">
+    <link rel="stylesheet" href="static\css\style.css">
 
     <!-- Шрифт -->
     <link href="https://fonts.googleapis.com/css2?family=Milligram+Variable:wght@100..900&display=swap" rel="stylesheet">
@@ -425,7 +425,7 @@
     &lt;a href="<mark>https://</mark>example.com/">Другой сайт&lt;/a>
     &lt;a href="<mark>/</mark>Конспекты/html 2/templates/about.html">Локальный сайт&lt;/a>
     &lt;a href="<mark>#</mark>main-header">Верх страницы&lt;/a>
-    &lt;a href="/Конспекты/html 2/images/art.jpg" <mark>download</mark>>Скачать&lt;/a>
+    &lt;a href="/media/art.jpg" <mark>download</mark>>Скачать&lt;/a>
     &lt;a href="<mark>mailto:</mark>ulybinmisa@gmail.com">електронная@почта.com&lt;/a>
     &lt;a href="<mark>tel:</mark>+79999999999">+7 (999) 999 99-99&lt;/a>
 
@@ -439,7 +439,7 @@
                     <a href="https://example.com/">Другой сайт</a><br>
                     <a href="/templates/about.html">Локальный сайт</a><br>
                     <a href="#main-header">Верх страницы</a><br>
-                    <a href="/Конспекты/html 2/images/art.jpg" download>Скачать</a><br>
+                    <a href="/media/art.jpg" download>Скачать</a><br>
                     <a href="mailto:ulybinmisa@gmail.com">електронная@почта.com</a><br>
                     <a href="tel:+79999999999">+7 (999) 999 99-99</a><br>
                     <br>
@@ -827,7 +827,7 @@
                     <code class="language-html">
     &lt;img <mark>src="\ссылка\" alt="нико"</mark> height="300">
 
-    &lt;img src="../media/art.jpg" alt="прото" height="300" <mark>loading="lazy"</mark>>
+    &lt;img src="/media/art.jpg" alt="прото" height="300" <mark>loading="lazy"</mark>>
 
     &lt;img src="\ссылка\" alt="фапута" height="300" <mark>decoding="async"</mark>>
     
@@ -868,12 +868,12 @@
                     </p>
                     
                     <code class="language-html">
-    &lt;video src="..\media\video.mp4" height="300" <mark>controls</mark> <mark>muted</mark>
+    &lt;video src="\media\video.mp4" height="300" <mark>controls</mark> <mark>muted</mark>
            preload="metadata" <mark>poster="\ссылка\"</mark>>&lt;/video>
     
     &lt;video <mark>autoplay</mark> <mark>loop</mark> muted playsinline>
-        &lt;<mark>source</mark> <mark>src="..\media\shark.gif" type="video/gif"</mark>>
-        &lt;source <mark>src="..\media\shark.mp4"</mark> type="video/mp4">
+        &lt;<mark>source</mark> <mark>src="\media\shark.gif" type="video/gif"</mark>>
+        &lt;source <mark>src="\media\shark.mp4"</mark> type="video/mp4">
         &lt;p>браузер не поддерживает видео&lt;/p>
     &lt;/video>
                     </code>
