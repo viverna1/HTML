@@ -76,25 +76,48 @@ function setUnderline(element) {
 // Инициализация - подчеркиваем первый элемент
 if (navItems.length > 0) {
     setUnderline(navItems[0]);
+
+    // Получаем все секции
+    const HTML_section = document.getElementById("HTML-container");
+    const CSS_section = document.getElementById("CSS-container");
+    const JS_section = document.getElementById("JS-container");
+
+    // Сначала скрываем все секции
+    HTML_section.style.display = "block";
+    CSS_section.style.display = "none";
+    JS_section.style.display = "none";
 }
 
 // Обработчики кликов
+// Обработчики кликов
 navItems.forEach(item => {
     item.addEventListener('click', () => {
+        // Устанавливаем подчеркивание
         setUnderline(item);
-    });
-});
+        
+        console.log(item.textContent);
 
-document.querySelectorAll('.style-toggle').forEach(toggle => {
-  // Связываем чекбокс и label через data-атрибуты
-  const target = toggle.dataset.target;
-  const label = document.querySelector(`.toggle-btn[data-for="${target}"]`);
-  
-  // Назначаем обработчик
-  toggle.addEventListener('change', function() {
-    this.closest('.result').classList.toggle('no-styles', !this.checked);
-  });
-  
-  // Делегируем клики на label
-  label.addEventListener('click', () => toggle.click());
+        // Получаем все секции
+        const HTML_section = document.getElementById("HTML-container");
+        const CSS_section = document.getElementById("CSS-container");
+        const JS_section = document.getElementById("JS-container");
+
+        // Сначала скрываем все секции
+        HTML_section.style.display = "none";
+        CSS_section.style.display = "none";
+        JS_section.style.display = "none";
+
+        // Показываем только нужную секцию
+        switch (item.textContent.trim()) { // Добавляем trim() для надежности
+            case "HTML":
+                HTML_section.style.display = "block";
+                break;
+            case "CSS":
+                CSS_section.style.display = "block";
+                break;
+            case "JS":
+                JS_section.style.display = "block";
+                break;
+        }
+    });
 });
