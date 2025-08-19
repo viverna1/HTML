@@ -1,66 +1,411 @@
-/* Общие стили секций */
-.toggle-section {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 20px auto;
-  position: relative;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: all 0.3s;
+/* Шаблон */
+.Pattern {
+    /* Размер */
+    height: 0;
+    width: 0;
+
+    /* цвет */
+    background-color: black;
+    color: #fff;
+
+    /* Отступы */
+    margin: 0;
+    padding: 0;
+
+    /* Контур */
+    border: #0a0a0a solid 0;
+    border-radius: 0;
+
+    /* Расположение */
+
+
+    /* Остальное */
+    /* Тень */
+    /* Курсор */
+    /* Шрифт */
+    /* Переход */
 }
 
-/* Стили переключателя */
-.toggle-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1;
+
+
+/* body */
+* {
+    padding: 0;
+    margin: 0;
 }
 
-.toggle-btn {
+body {
+    height: 100vh;
+
+    /* background-color: #0a0a0a; */
+
+    font-family: 'Milligram Variable', sans-serif;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+                    url('/Конспекты/html 2/images/background.png');
+    z-index: -1;
+}
+
+
+/* Структурные теги (head main footer) */
+#main-header {
+    height: 50px;
+
+    background: linear-gradient(to bottom, var(--gradient-color), transparent);
+    color: #fff;
+
+    padding: 30px;
+
+    transition: background 0.3s ease;
+    
+    text-align: center;
+    text-shadow: 0 0 1px #fff;
+}
+
+main {
+    width: calc(100% - 100px); /* 100% минус отступы (50px слева + 50px справа) */
+    max-width: 1200px;
+
+    background-color: #121212;
+
+    margin: 30px auto;
+    padding: 15px;
+
+    border-radius: 30px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+
+
+/* Верхняя линия навигации */
+#main-nav {
+    margin-bottom: 20px;
+    position: relative;
+}
+/* Кнопки */
+#main-nav ul {
+    padding: 0 60px;
+    margin: 0;
+    
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+}
+#main-nav li {
+    width: 30%;
+
+    margin: 0 10px;
+    padding: 3px auto;
+
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    transition: text-shadow 0.3s ease;
+}
+#main-nav li:hover {
+    text-shadow: 0 0 10px;
+}
+
+.underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    background: #00ff55; /* Начальный цвет (как HTML) */
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+
+
+/* Строка навигации */
+#HTML-container, #CSS-container, #JS-container {
+    margin: 0 20px;
+    padding-bottom: 5px;
+}
+
+/* HTML */
+.html-text {
+    color: #00ff55;
+}
+
+/* CSS */
+.css-text {
+    color: #24fff2;    
+}
+
+/* JS */
+.js-text {
+    color: #ffea00;
+}
+
+
+
+/* Разделы на сайте */
+#heading {
+    padding: 10px;
+    margin: 15px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Списки аттрибутов */
+.attributes-list {
+    margin: 15px 0;
+    list-style-type: none;
+}
+.attributes-list > li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #00ff55;
+    border-radius: 0 10px 10px 0;
+}
+.attributes-list > li > mark {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: #2cff3a;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+.attributes-list ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+.attributes-list ul li {
+    position: relative;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    color: #e0e0e0;
+}
+.attributes-list code {
+    background-color: #1a202c;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #a2ffcf;
+}
+
+/* Разделы с кодом на сайте */
+.language-html {
+    display: block;
+
+    background-color: #0a0a0a;
+
+    /* padding: 15px; */
+    margin: 10px 0;
+
+    border: 3px solid #fff;
+    border-radius: 15px;    
+
+    line-height: 130%;
+
+    white-space: pre; /* Перенос строки */
+    overflow: hidden;
+}
+
+/* Результат кода */
+.result {
+    display: block;
+
+    background-color: #272727;
+
+    padding: 30px;
+    margin: 10px 0;
+
+    border-radius: 15px;
+}
+
+/* Общее */
+.highlighted {
+    background-color: #464646;
+}
+
+.disabled {
+    display: none;
+}
+
+mark {
+    padding: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: inherit;
+    border-radius: 3px;
+}
+
+ul li, ol li {
+    margin-left: 20px;
+}
+
+a {
+    color: cyan;
+}
+h3 {
+    margin-top: 30px;
+}
+h4 {
+    margin-top: 20px;
+    font-size: large;
+}
+
+/* кнопки */
+.button {
+  background: #55b876;
+  color: white;
+  
   display: inline-block;
-  width: 40px;
-  height: 20px;
-  background: #4CAF50;
-  border-radius: 20px;
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 4px;
+
+  text-align: center;
   cursor: pointer;
-  position: relative;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
 }
 
-.toggle-btn::after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background: white;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  transition: transform 0.3s;
+/* таблицы */
+td, tr, th, table {
+    padding: 5px;
+
+    border: #fff solid 2px;
+    text-align: center;
 }
 
-.style-toggle:not(:checked) + .toggle-btn {
-  background: #ccc;
+
+/* Форма и вводы */
+form {
+    margin: 10px 0;
+    padding: 20px;
+
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 10px;
 }
 
-.style-toggle:not(:checked) + .toggle-btn::after {
-  transform: translateX(20px);
+input {
+    padding: 5px;
+    margin: 3px 0;
+
+    border: 2px solid #555;
+    border-radius: 5px;
+
+    background-color: #2a2a2a;
+    color: #fff;
+
+    font-size: 16px;
+
+    transition: all 0.2s ease;
 }
 
-/* Сброс стилей */
-.toggle-section.no-styles {
-  all: initial;
-  display: block;
-  position: relative;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px;
+input:focus {
+    border-color: var(--accent-color, #00ff55);
+    background-color: #1b1b1b;
+    box-shadow: 0 0 0 1px var(--accent-color, #00ff55);
+    outline: none;
 }
 
-.toggle-section.no-styles *:not(.toggle-container):not(.toggle-btn):not(.toggle-btn::after) {
-  all: initial;
-  display: block;
+/* Общие стили для формы */
+form {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Стили для textarea */
+textarea {
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+
+    min-height: 100px;
+    max-height: 300px;
+    min-width: 100px;
+    max-width: 300px;
+
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus {
+    border-color: var(--accent-color, #00ff55);
+    background-color: #1b1b1b;
+    box-shadow: 0 0 0 1px var(--accent-color, #00ff55);
+    outline: none;
+}
+
+/* Стили для select */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+}
+
+select:focus {
+    border-color: var(--accent-color, #00ff55);
+    background-color: #1b1b1b;
+    box-shadow: 0 0 0 1px var(--accent-color, #00ff55);
+    outline: none;
+}
+
+/* Стили для optgroup */
+optgroup {
+    color: #aaa;
+    font-style: normal;
+    font-weight: bold;
+}
+
+option {
+    background-color: #2a2a2a;
+    padding: 5px;
 }

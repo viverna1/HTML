@@ -10,7 +10,7 @@
     <meta name="keywords" content="тест,проверка,html,конспект">
 
     <!-- Подключение CSS файла -->
-    <link rel="stylesheet" href="..\static\css\summary_style.css">
+    <link rel="stylesheet" href="..\static\css\style.css">
 
     <!-- Шрифт -->
     <link href="https://fonts.googleapis.com/css2?family=Milligram+Variable:wght@100..900&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
             </ul>
         </div>
         <!-- Шаблон
-        <section>
+        <section class="disabled1">
             <header id="heading"><h2>название</h2></header>
             
             <p>
@@ -241,7 +241,7 @@
                 <header id="heading"><h2>Таблицы</h2></header>
                 
                 <p>
-                    таб таб
+                    описание
     
                     <ul class="attributes-list">
                         <li>
@@ -262,8 +262,8 @@
                         <li>
                             <mark>Аттрибуты</mark>
                             <ul>
-                                <li>colspan<code></code> - что бы ячейка занимала 2 места в ширину</li>
-                                <li>rowspan<code></code> - занимала 2 места в длинну</li>
+                                <li><code>colspan</code> - что бы ячейка занимала 2 места в ширину</li>
+                                <li><code>rowspan</code> - занимала 2 места в длинну</li>
                             </ul>
                         </li>
                     </ul>
@@ -406,7 +406,7 @@
                 <header id="heading1"><h2>Ввод</h2></header>
                 
                 <!-- Кнопка -->
-                <div class="disabled1">
+                <div class="disabled">
                     <header><h3>Кнопки</h3></header>
 
                     <p>
@@ -441,68 +441,257 @@
                     </div>
                 </div>
 
-                <!-- Выпадающий список -->
-                <div class="disabled1">
-                    <header><h3>Выпадающий список</h3></header>
-
-                    <p></p>
-                    
-                    <code class="language-html">
-    &lt;>
-                    </code>
-                    
-                    <div class="result">
-                        
-                    </div>
-                </div>
-
-                <!-- Текстовый ввод -->
-                <div class="disabled1">
-                    <header><h3>Текстовый ввод</h3></header>
-
-                    <p></p>
-                    
-                    <code class="language-html">
-    &lt;>
-                    </code>
-                    
-                    <div class="result">
-                        
-                    </div>
-                </div>
-                
-                <!-- Другое -->
-                <div class="disabled1">
-                    <header><h3>Другое</h3></header>
+                <!-- Тег <input> -->
+                <div class="disabled">
+                    <header><h3>input</h3></header>
 
                     <p>
-                        форма
+                        описание
 
                         <ul class="attributes-list">
                             <li>
-                                <mark></mark>
+                                <mark>&lt;type></mark>
                                 <ul>
+                                    <li><code>text</code> - текст</li>
+                                    <li><code>number</code> - число</li>
+                                    <li><code>checkbox</code> - выбор нескольких элементов</li>
+                                    <li><code>radio</code> - выбобр одного значения из нескольких (для группировки использовать аттрибут name)</li>
+                                    <li><code>file</code> - файл</li>
+
+                                    <li><mark>другие опции ввода текста:</mark></li>
+                                    <li><code>email</code> - почта</li>
+                                    <li><code>passord</code> - пароль</li>
                                     <li><code></code> - </li>
-                                    <li><code></code> - </li>
+                                    <li><code>url</code> - глобальная ссылка</li>
+                                    <li><code>tel</code> - номер телефона</li>
+                                    <li><code>search</code> - для поискового запроса</li>
+                                    
+                                    <li><mark>дата и время:</mark></li>
+                                    <li><code>date</code> - ввод даты в формате (дд.мм.гггг)</li>
+                                    <li><code>datetime-local</code> - дата в формате (дд.мм.гггг, чч.мм)</li>
+                                    <li><code>month</code> - формат (мм.гг)</li>
+                                    <li><code>week</code> - неделя (неделя, год)</li>
+                                    <li><code>time</code> - время</li>
+
+                                    <li><mark>другое:</mark></li>
+                                    <li><code>color</code> - цвет</li>
+                                    <li><code>range</code> - полоска ввода</li>
                                 </ul>
                             </li>
                             
                             <li>
-                                <mark></mark>
+                                <mark>аттрибуты</mark>
                                 <ul>
+                                    <li><code>value</code> - значение по умолчанию</li>
+                                    <li><code>placeholder</code> - показывает текст в пустом поле ввода</li>
+                                    <li><code>disabled</code> - нельзя будет взаимодействовать с полем вводаrequired</li>
                                     <li><code></code> - </li>
                                     <li><code></code> - </li>
+                                    <li><code>multiple</code> - позволяет прикрепить несколько файлов или несколько элементов в выпадающем списке</li>
+                                    <li><code>checked</code> - по умолчанию выделенный checkbox и radio</li>
+                                    <li><code>min, max</code> - лимиты для number</li>
+                                    <li><code>readonly</code> - нельзя редактировать, но можно выделить текст</li>
+                                    <li><code>inputmode</code> - задаёт клавиатуру на телефоне</li>
+                                    <li><code>autocomplete</code> - включено ли автозаполнение полей, <a href="https://doka.guide/html/autocomplete/">Полезная ссылка</a></li>
+                                    <li><code>form</code> - применяет поле ввода к форме, по id</li>
+                                    <li><code>minlength, maxlength</code> - колличество букв в полях ввода</li>
+                                    <li><code>pattern</code> - проверяет соответствует ли ввод паттерну, к примеру "[a-zA-Z]+"</li>
+                                    <li><code>spellcheck</code> - проверка правописания</li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <mark>inputmode</mark>
+                                <ul>
+                                    <li><code>text</code> - обычная</li>
+                                    <li><code>none</code> - отключает клавиатуру (если есть кастомная к примеру на сайте)</li>
+                                    <li><code>numeric</code> - числа</li>
+                                    <li><code>decimal</code> - как numeric, но добавится запятая</li>
+                                    <li></li>
+                                    <li><code>tel</code> - номер телефона</li>
+                                    <li><code>email</code> - почта</li>
+                                    <li><code>search</code> - поиск</li>
+                                    <li><code>url</code> - ссылка</li>
                                 </ul>
                             </li>
                         </ul>
                     </p>
                     
                     <code class="language-html">
-    &lt;>
+    &lt;h2>Основные&lt;/h2>
+    &lt;input type="<mark>text</mark>" <mark>placeholder</mark>="Введите текст" <mark>value</mark>="текст">
+    &lt;input type="<mark>number</mark>" value="0" <mark>min="0"</mark> <mark>max="10"</mark>>
+    &lt;input type="<mark>checkbox</mark>">
+    &lt;input type="<mark>radio</mark>" <mark>name="rad"</mark>>
+    &lt;input type="<mark>radio</mark>" <mark>name="rad"</mark>>
+    &lt;input type="<mark>file</mark>">
+
+    &lt;h2>Текстовый ввод&lt;/h2>
+    &lt;input type="<mark>email</mark>" placeholder="Почта">
+    &lt;input type="<mark>passord</mark>" placeholder="Пароль">
+    &lt;input type="<mark>url</mark>" placeholder="Ссылка">
+    &lt;input type="<mark>tel</mark>" placeholder="Номер телефона">
+    &lt;input type="<mark>search</mark>" placeholder="Поиск">
+
+    &lt;h2>Дата и время&lt;/h2>
+    &lt;input type="<mark>date</mark>">
+    &lt;input type="<mark>datetime-local</mark>">
+    &lt;input type="<mark>month</mark>">
+    &lt;input type="<mark>week</mark>">
+    &lt;input type="<mark>time</mark>">
+
+    &lt;h2>Другое&lt;/h2>
+    &lt;input type="<mark>color</mark>">
+    &lt;input type="<mark>range</mark>">
                     </code>
                     
                     <div class="result">
+                        <h4>Основные</h4>
+                        <input type="text" placeholder="Введите текст" value="текст" disabled><br>
+                        <input type="number" value="0" min="0" max="10"><br>
+                        <input type="checkbox">
+                        <input type="radio" name="rad" id="">
+                        <input type="radio" name="rad" id=""><br>
+                        <input type="file"><br>
                         
+                        <h4>Текстовый ввод</h4>
+                        <input type="email" placeholder="Почта"><br>
+                        <input type="passord" placeholder="Пароль"><br>
+                        <input type="url" placeholder="Ссылка"><br>
+                        <input type="tel" placeholder="Номер телефона"><br>
+                        <input type="search" placeholder="Поиск"><br>
+                        
+                        <h4>Дата и время</h4>
+                        <input type="date"><br>
+                        <input type="datetime-local"><br>
+                        <input type="month"><br>
+                        <input type="week"><br>
+                        <input type="time"><br>
+                        
+                        <h4>Другое</h4>
+                        <input type="color"><br>
+                        <input type="range"><br>
+                    </div>
+                </div>
+                
+                <!-- Другое -->
+                <div class="disabled">
+                    <header><h3>Другое</h3></header>
+
+                    <p>
+                        описание
+
+                        <ul class="attributes-list">
+                            <li>
+                                <mark>теги</mark>
+                                <ul>
+                                    <li><code>form</code> - совокупность других тегов ввода</li>
+                                    <li><code>fieldset</code> - для визуальной группировки нескольких полей ввода</li>
+                                    <li><code>legend</code> - для заголовка в тегах fieldset</li>
+                                    <li><code>label</code> - обязательный, отображаемое название для поля ввода</li>
+                                    <li><code>textarea</code> - большое поле ввода текста</li>
+                                    <li><code>select</code> - выбор опций</li>
+                                    <li><code>option</code> - опция для select (аттрибут value обязательно)</li>
+                                    <li><code>otpgroup</code> - для визуально группировки нескольких тегов option в select</li>
+                                    <li><code>size</code> - количество отображаемых опций в select</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <mark>form</mark>
+                                <ul>
+                                    <li><code>action</code> - адрес для сприпта</li>
+                                    <li><code>method</code> - метод отправки формы</li>
+                                    <li><code>novalidate</code> - форма игнорирует required</li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <mark>аттрибуты</mark>
+                                <ul>
+                                    <li><code>selected</code> - выбранная опция по умолчанию в select</li>
+                                    <li><code>required</code> - обязательное поле</li>
+                                    <li><code>rows, cols</code> - ограничевает символы в textarea</li>
+                                    <li><code>wrap</code> - soft: при отправке формы textarea отправляется без переносов строки, hard: будет разбит на строки, длинной, которая указана в rows</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <code class="language-html">
+    &lt;<mark>form</mark>>
+        &lt;<mark>fieldset</mark>>
+            &lt;<mark>legend</mark>>Заголовок&lt;/legend>
+
+            &lt;<mark>label</mark> <mark>for="name"</mark>>Имя:&lt;/label>
+            &lt;input type="text" <mark>id="name"</mark> name="name">
+            
+            &lt;label for="email">Email:&lt;/label>
+            &lt;input type="email" id="email" name="email">
+        &lt;/fieldset>
+    &lt;/form>
+
+    &lt;form>
+        &lt;fieldset>
+            &lt;<mark>textarea</mark> placeholder="Напишите конспект">&lt;/textarea>
+
+            &lt;<mark>select</mark> <mark>required</mark>>
+                &lt;<mark>option</mark> <mark>value=""</mark> <mark>disabled</mark> <mark>selected</mark>>---&lt;/option>
+                &lt;option <mark>value="1"</mark>>Опция 1&lt;/option>
+                &lt;option value="2">Опция 2&lt;/option>
+            &lt;/select>
+
+            &lt;select name="" id="select-field2">
+                &lt;<mark>optgroup</mark> label="Группа">
+                    &lt;option value="1">Опция 1&lt;/option>
+                    &lt;option value="2">Опция 2&lt;/option>
+                &lt;/optgroup>
+                &lt;optgroup label="Группа 2">
+                    &lt;option value="3">Опция 3&lt;/option>
+                    &lt;option value="4">Опция 4&lt;/option>
+                &lt;/optgroup>
+            &lt;/select>
+            &lt;button type="submit">Подтвердить&lt;/button>
+        &lt;/fieldset>
+    &lt;/form>
+                    </code>
+                    
+                    <div class="result">
+                        <form>
+                            <fieldset>
+                                <legend>Заголовок</legend>
+
+                                <label for="name">Имя:</label>
+                                <input type="text" id="name" name="name"><br>
+                                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email">
+                            </fieldset>
+                        </form>
+
+                        <form>
+                            <fieldset>
+                                <textarea placeholder="Напишите конспект"></textarea><br>
+
+                                <select required>
+                                    <option value="" disabled selected>---</option>
+                                    <option value="1">Опция 1</option>
+                                    <option value="2">Опция 2</option>
+                                </select><br>
+
+                                <select name="" id="select-field2">
+                                    <optgroup label="Группа">
+                                        <option value="1">Опция 1</option>
+                                        <option value="2">Опция 2</option>
+                                    </optgroup>
+                                    <optgroup label="Группа 2">
+                                        <option value="3">Опция 3</option>
+                                        <option value="4">Опция 4</option>
+                                    </optgroup>
+                                </select><br>
+                                <button type="submit" class="button">Подтвердить</button>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -514,7 +703,13 @@
                 <p>&lt;div> - занимает всю доступную ему ширину<br>
                     &lt;span> - занимает столько места, сколько в нём содержится контента<br>
                     &lt;section> - блок со связаным по смыслу контенту<br>
-                    &lt;article> - блок с независимым от сайта контентом
+                    &lt;article> - блок с независимым от сайта контентом<br>
+                    <br>
+                    &lt;header> - для блока шапки сайта<br>
+                    &lt;main> - для основного блока сайта<br>
+                    &lt;nav> - для навигации по сайту<br>
+                    &lt;aside> - для боковой панели сайта<br>
+                    &lt;footer> - для нижней части сайта<br>
                 </p>
                 
                 <code class="language-html">
@@ -555,7 +750,7 @@
             </section>
 
             <!-- Медиа -->
-            <section class="disabled">
+            <section class="disabled1">
                 <header id="heading"><h2>Медиа</h2></header>
             
                 <!-- Картинки -->
@@ -729,11 +924,69 @@
                 </div>
             </section>
 
+            <!-- svg иконки -->
+            <section class="disabled1">
+                <header id="heading"><h2>Векторная графика &lt;svg></h2></header>
+                
+                <p>
+                    Изображение, созданное на основе множество точек, обьеденённых математическими формулами.<br>
+                    Импортируется из figma
+                </p>
+                
+                <code class="language-html">
+    &lt;?xml version="1.0" encoding="utf-8"?>
+    &lt;svg width="80px" height="80px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        &lt;path d="M7.17158 14.2426C6.78106 14.6332 6.14789 14.6332 5.75737 14.2426C5.36684 13.8521 5.36684 13.2189 5.75737 12.8284L12.8284 5.75735C13.219 5.36682 13.8521 5.36682 14.2427 5.75735C14.6332 6.14787 14.6332 6.78104 14.2427 7.17156L7.17158 14.2426Z" fill="#000000"/>
+        &lt;path d="M5.75737 7.17152C5.36684 6.781 5.36684 6.14783 5.75737 5.75731C6.14789 5.36679 6.78106 5.36679 7.17158 5.75731L14.2427 12.8284C14.6332 13.2189 14.6332 13.8521 14.2427 14.2426C13.8521 14.6331 13.219 14.6331 12.8284 14.2426L5.75737 7.17152Z" fill="#000000"/>
+    &lt;/svg>
+                </code>
+                
+                <div class="result">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg width="80px" height="80px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.17158 14.2426C6.78106 14.6332 6.14789 14.6332 5.75737 14.2426C5.36684 13.8521 5.36684 13.2189 5.75737 12.8284L12.8284 5.75735C13.219 5.36682 13.8521 5.36682 14.2427 5.75735C14.6332 6.14787 14.6332 6.78104 14.2427 7.17156L7.17158 14.2426Z" fill="#000000"/>
+                        <path d="M5.75737 7.17152C5.36684 6.781 5.36684 6.14783 5.75737 5.75731C6.14789 5.36679 6.78106 5.36679 7.17158 5.75731L14.2427 12.8284C14.6332 13.2189 14.6332 13.8521 14.2427 14.2426C13.8521 14.6331 13.219 14.6331 12.8284 14.2426L5.75737 7.17152Z" fill="#000000"/>
+                    </svg>
+                </div>
+            </section> 
         </div>
 
         <!-- CSS -->
         <div id="CSS-container">
-            
+            <!-- Глобальные аттрибуты -->
+            <section class="disabled1">
+                <header id="heading"><h2>Глобальные аттрибуты</h2></header>
+                
+                <p>
+                    Нужны для взаимодействия HTML с CSS и JavaScript.<br>
+
+                    <ul class="attributes-list">
+                        <li>
+                            <mark>Аттрибуты</mark>
+                            <ul>
+                                <li><code>class</code> - </li>
+                                <li><code></code> - </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <mark></mark>
+                            <ul>
+                                <li><code></code> - </li>
+                                <li><code></code> - </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                
+                <code class="language-html">
+    &lt;>
+                </code>
+                
+                <div class="result">
+
+                </div>
+            </section>             
         </div>
         
         <!-- Java Script -->
@@ -742,6 +995,6 @@
         </div>
 
     </main>
-    <script src="..\static\scripts\summaty_script.js"></script>
+    <script src="..\static\scripts\script.js"></script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+/* Общие стили секций */
+.toggle-section {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+/* Стили переключателя */
+.toggle-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.toggle-btn {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background: #4CAF50;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.toggle-btn::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.style-toggle:not(:checked) + .toggle-btn {
+  background: #ccc;
+}
+
+.style-toggle:not(:checked) + .toggle-btn::after {
+  transform: translateX(20px);
+}
+
+/* Сброс стилей */
+.toggle-section.no-styles {
+  all: initial;
+  display: block;
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.toggle-section.no-styles *:not(.toggle-container):not(.toggle-btn):not(.toggle-btn::after) {
+  all: initial;
+  display: block;
+}
