@@ -10,7 +10,7 @@
     <meta name="keywords" content="тест,проверка,html,конспект">
 
     <!-- Подключение CSS файла -->
-    <link rel="stylesheet" href="static\css\style.css">
+    <link rel="stylesheet" href="\static\css\style.css">
 
     <!-- Шрифт -->
     <link href="https://fonts.googleapis.com/css2?family=Milligram+Variable:wght@100..900&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 <body>
     <header id="main-header">
         <div id="header-gradient">
-            <h1>Конспект по HTML, CSS и JavaScript</h1>
+            <h1>Конспект по веб-разработен</h1>
         </div>
     </header>
 
@@ -63,6 +63,10 @@
     &lt;>
             </code>
             
+            <code class="language-css">
+    .
+            </code>
+            
             <div class="result">
 
             </div>
@@ -97,7 +101,8 @@
                 </div>
             </section>
             
-            <!-- Отоброжение текста ">
+            <!-- Отоброжение текста "> -->
+            <section class="disabled1">
                 <header id="heading"><h2>Отоброжение текста</h2></header>
                 
                 <p>&lt;p> - делает отступы сверху и снизу и занимает всю ширину экрана<br>
@@ -1009,35 +1014,95 @@
                 
                 <p>
                     Нужны для взаимодействия HTML с CSS и JavaScript.<br>
+                    Подключить его можно так<br>
+                    <code>&lt;link rel="stylesheet" href="\static\css\style.css"></code>
 
                     <ul class="attributes-list">
                         <li>
                             <mark>Аттрибуты</mark>
                             <ul>
                                 <li><code>class</code> - Соединять с CSS можно через точку. Можно писать несколько, разделёнными пробелами</li>
-                                <li><code>id</code> - Соединять с CSS можно через #. Уникальный элемент для каждого тега</li>
-                                <li><code></code> - </li>
-                                <li><code></code> - </li>
-                                <li><code></code> - </li>
-                            </ul>
-                        </li>
-                        
-                        <li>
-                            <mark></mark>
-                            <ul>
-                                <li><code></code> - </li>
-                                <li><code></code> - </li>
+                                <li><code>id</code> - Соединять с CSS можно через #</li>
+                                <li>Так же можео подключать стили по обычным тегам</li>
+                                <li><code>по аттрибуту</code></li>
                             </ul>
                         </li>
                     </ul>
                 </p>
                 
                 <code class="language-html">
-    &lt;>
+    &lt;p <mark>class="clas"</mark>>класс&lt;/p>
+    &lt;p class="<mark>clas</mark> <mark>clas2</mark>">2 класса&lt;/p>
+    &lt;p <mark>id="i"</mark>>айди&lt;/p>
+    &lt;<mark>p</mark>>обычный тег&lt;/p>
+    &lt;<mark>p name</mark>="">аттрибут в &lt;p>&lt;/p>
+    &lt;p <mark>name</mark>="">просто аттрибут&lt;/p>
+    &lt;p name=<mark>"par"</mark>>аттрибут со значением&lt;/p>
+    <mark>&lt;p></mark>текст <mark>&lt;b></mark>выделеный текст&lt;/b>&lt;/p>
                 </code>
-                
-                <div class="result">
 
+                <code class="language-css">
+    <mark>.clas</mark> {
+        color: #00ff55;
+    }
+    <mark>.clas.clas2</mark> {
+        color: #157e38;
+    }
+    <mark>#i</mark> {
+        color: #ff5500;
+    }
+    <mark>p</mark> {
+        color: #0000ff;
+    }
+    p[<mark>name</mark>] {
+        color: #ff00ff;
+    }
+    <mark>[name]</mark> {
+        color: #00fffb;
+    }
+    [name=<mark>"par"</mark>] {
+        color: #f2ff00;
+    }
+    <mark>p b</mark> {
+        color: #ff0000;
+    }
+                </code>
+    
+                <div class="result">
+                    <style>
+                        .clas {
+                            color: #00ff55;
+                        }
+                        .clas.clas2 {
+                            color: #157e38;
+                        }
+                        #i {
+                            color: #ff5500;
+                        }
+                        p1 {
+                            color: #0000ff;
+                        }
+                        p[name="2"] {
+                            color: #ff00ff;
+                        }
+                        [name] {
+                            color: #00fffb;
+                        }
+                        [name="par"] {
+                            color: #f2ff00;
+                        }
+                        p b {
+                            color: #ff0000;
+                        }
+                    </style>
+                    <p class="clas">класс</p>
+                    <p class="clas clas2">2 класса</p>
+                    <p id="i">айди</p>
+                    <p1>обычный тег</p1>
+                    <p name="2">аттрибут в &lt;p></p>
+                    <p name="">просто аттрибут</p>
+                    <p name="par">аттрибут со значением</p>
+                    <p>текст <b>выделеный текст</b></p>
                 </div>
             </section>             
         </div>

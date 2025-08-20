@@ -214,7 +214,23 @@ main {
     /* padding: 15px; */
     margin: 10px 0;
 
-    border: 3px solid #fff;
+    border: 3px solid #00ff55;
+    border-radius: 15px;    
+
+    line-height: 130%;
+
+    white-space: pre; /* Перенос строки */
+    overflow: hidden;
+}
+.language-css {
+    display: block;
+
+    background-color: #0a0a0a;
+
+    /* padding: 15px; */
+    margin: 10px 0;
+
+    border: 3px solid #24fff2;
     border-radius: 15px;    
 
     line-height: 130%;

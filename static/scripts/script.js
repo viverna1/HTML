@@ -8,7 +8,6 @@ function updateAttributeColors(color) {
     const attributesList = document.querySelectorAll('.attributes-list > li');
     const attributesMark = document.querySelectorAll('.attributes-list > li > mark');
     const attributesCode = document.querySelectorAll('.attributes-list code');
-    const language_html = document.querySelectorAll('.language-html'); // Поля с кодом на сайте
     
     const buttons = document.querySelectorAll('.button');
     const mark = document.querySelector('mark');
@@ -36,12 +35,6 @@ function updateAttributeColors(color) {
     attributesCode.forEach(code => {
         code.style.color = color;
         code.style.backgroundColor = darkerColor;
-    });
-
-    // Поля с кодом на сайте
-    language_html.forEach(code => {
-        // code.style.color = `rgba(${r}, ${g}, ${b}, 0.15)`;
-        code.style.borderColor = color;
     });
 
     // Кнопки
